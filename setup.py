@@ -4,7 +4,7 @@ from distutils.command.build_ext import build_ext
 
 class BuildExt(build_ext):
     def build_extensions(self):
-        self.compiler.compiler_so.remove("-Wstrict-prototypes")
+        # self.compiler.compiler_so.remove("-Wstrict-prototypes")
         self.compiler.compiler_so.append("-std=c++11")
         # self.compiler.compiler_so.append("-O2")
         # self.compiler.compiler_so.append("-march=native")
